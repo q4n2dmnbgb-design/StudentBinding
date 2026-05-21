@@ -2,7 +2,9 @@
 <ContentPage
     x:Class="StudentBinding.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:StudentBinding.Models"
+    x:DataType="models:Student">
 
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
@@ -12,7 +14,7 @@
                 Aspect="AspectFit"
                 HeightRequest="185"
                 SemanticProperties.Description="Student profile image"
-                Source="dotnet_bot.png" />
+                Source="{Binding Image}" />
 
             <!--  שם התלמיד  -->
             <Label
@@ -21,8 +23,8 @@
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
                 SemanticProperties.HeadingLevel="Level1"
-                Text="ישראל ישראלי"
-                TextColor="MidnightBlue" />
+                Text="{Binding Name}"
+                TextColor="Pink" />
 
             <!--  גיל  -->
             <Label
@@ -31,35 +33,19 @@
                 HorizontalTextAlignment="Center"
                 SemanticProperties.Description="Student age"
                 SemanticProperties.HeadingLevel="Level2"
-                Text="16"
-                TextColor="MidnightBlue" />
+                Text="{Binding Age}"
+                TextColor="Pink" />
 
             <!--  תאריך לידה  -->
             <DatePicker
-                Date="01/01/2000"
+                Date="{Binding BirthDate}"
                 FontSize="24"
                 HorizontalOptions="Center"
                 SemanticProperties.Description="Student birth date"
-                TextColor="MidnightBlue" />
+                TextColor="Pink" />
 
-            <!--  כתובת מייל  -->
-            <Label
-                FontSize="24"
-                HorizontalOptions="Center"
-                HorizontalTextAlignment="Center"
-                SemanticProperties.Description="Student email address"
-                Text="ayelet@gmail.com"
-                TextColor="MidnightBlue" />
-
-            <!--  טלפון  -->
-            <Label
-                FontSize="24"
-                HorizontalOptions="Center"
-                HorizontalTextAlignment="Center"
-                SemanticProperties.Description="Student phone number"
-                Text="050-1234567"
-                TextColor="MidnightBlue" />
-            <Button Text="עדכן תאריך לידה" />
+            <Button Text="החלף סטודנט" Clicked="ChangeStudent_Clicked"
+                BackgroundColor="pink"/>
         </VerticalStackLayout>
     </ScrollView>
 
