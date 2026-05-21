@@ -9,7 +9,7 @@ namespace StudentBinding.Models
     internal class Student : ObservableObject
     {
         public string Name { get; set; }
-        public string Image { get; set; }
+        public string Image { get; set; } 
         public DateTime BirthDate { get; set; }
         public DateTime CurrentDate { get; set; }
         public int Age
