@@ -48,7 +48,7 @@
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
                 SemanticProperties.Description="Student email address"
-                Text="joe@gmail.com"
+                Text="ayelet@gmail.com"
                 TextColor="MidnightBlue" />
 
             <!--  טלפון  -->
