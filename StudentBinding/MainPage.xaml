@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:models="clr-namespace:StudentBinding.Models"
-    x:DataType="models:Student">
+    >
 
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
@@ -14,7 +14,7 @@
                 Aspect="AspectFit"
                 HeightRequest="185"
                 SemanticProperties.Description="Student profile image"
-                Source="{Binding Image}" />
+                Source="{Binding CurrentStudent.Image}" />
 
             <!--  שם התלמיד  -->
             <Label
@@ -23,7 +23,7 @@
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
                 SemanticProperties.HeadingLevel="Level1"
-                Text="{Binding Name}"
+                Text="{Binding CurrentStudent.Name}"
                 TextColor="Pink" />
 
             <!--  גיל  -->
@@ -33,12 +33,12 @@
                 HorizontalTextAlignment="Center"
                 SemanticProperties.Description="Student age"
                 SemanticProperties.HeadingLevel="Level2"
-                Text="{Binding Age}"
+                Text="{Binding CurrentStudent.Age}"
                 TextColor="Pink" />
 
             <!--  תאריך לידה  -->
             <DatePicker
-                Date="{Binding BirthDate}"
+                Date="{Binding CurrentStudent.BirthDate}"
                 FontSize="24"
                 HorizontalOptions="Center"
                 SemanticProperties.Description="Student birth date"

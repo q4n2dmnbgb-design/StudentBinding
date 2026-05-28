@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentBinding.Models
 {
-    internal class Student : ObservableObject
+    public class Student : ObservableObject
     {
         private string name;
         public string Name { get{return name;} set
